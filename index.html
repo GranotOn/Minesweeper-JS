@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="src/main.js" defer> </script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Minesweeper</title>
+</head>
+<body>
+    <header>
+        <h1>Minesweeper</h1>
+        <h3 id="game-status"></h3>
+    </header>
+    <div class="game-container">
+        <div id="toolbar" class="toolbar">
+            <div id="difficulty">
+                <label>
+                    Easy
+                    <input type="radio" id="easy" name="difficulty" checked="true" />    
+                </label>
+                <label>
+                    Medium
+                    <input type="radio" id="medium" name="difficulty" />    
+                </label>
+                <label>
+                    Hard
+                    <input type="radio" id="hard" name="difficulty" />    
+                </label>
+            </div>
+            <button type="reset" id="reset-game" class="btn">Reset</button>
+        </div>
+        <div id="infobar" class="infobar">
+            <div class="info-container">
+                <p class="info-label">Mines:</p>
+                <p class="mines-left" id="mines-left">0</p>
+            </div>
+            <button type="button" id="hint" class="btn">Hint</button>
+            <div class="info-container">
+                <p class="info-label">Time:</p>
+                <p class="game-timer" id="game-timer">0</p>
+            </div>
+        </div>
+        <div id="board" class="board"></div>
+    </div>
+    <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+</body>
+</html>

@@ -1,0 +1,196 @@
+header 
+{
+    width: 100%;
+    text-align: center;
+}
+
+.game-container
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.toolbar
+{
+    padding: 5px;
+    width: 80%;
+    margin: 5px 20px 5px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.infobar
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.info-container
+{
+    display:flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
+.info-label
+{
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.board
+{
+    display: grid;
+    width: max-content;
+    gap: 2px;
+    padding: 5px;
+}
+
+.row
+{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 2px;
+}
+
+.tile {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(184, 195, 195);
+    border: 3px solid rgb(184, 184, 184);
+
+}
+
+.hidden
+{
+    background-color: azure;
+    border-style: outset;
+    border: 3px solid rgb(184, 184, 184);
+}
+.hidden:hover
+{
+    background-color: rgb(199, 210, 210);
+}
+
+.hidden:active
+{
+    background-color: rgb(186, 193, 193);
+}
+
+.flag
+{
+
+    background-image: url("./public/images/flag.png");
+    background-size: contain;
+}
+
+.mine:not(.hidden)
+{
+
+    background-image: url("./public/images/bomb.png");
+    background-size: contain;
+}
+
+.visible
+{
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn
+{
+    background-color: #AA66CC;
+    color: white;
+    font-weight: bold;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 72px;
+    height: 32px;
+    transition: color 0.5s, background-color 0.5s;
+    -webkit-transition: color 0.5s, background-color 0.5s;
+    -moz-transition: color 0.5s, background-color 0.5s;
+    -o-transition: color 0.5s, background-color 0.5s;
+
+}
+
+.btn:hover
+{
+    cursor: pointer;
+    background-color: #9559b3;
+}
+
+.btn:active
+{
+    background-color: #951ed0;
+}
+
+.glow:not(.visible)
+{
+    animation: glow 1s infinite alternate;
+}
+
+.one-mine::before
+{
+    content: "1";
+    color: blue;
+}
+
+.two-mines::before
+{
+    content: "2";
+    color: green;
+}
+
+.three-mines::before
+{
+    content: "3";
+    color: yellow;
+}
+
+.four-mines::before
+{
+    content: "4";
+    color: orange;
+}
+
+.five-mines::before
+{
+    content: "5";
+    color: purple;
+}
+
+.six-mines::before
+{
+    content: "6";
+    color: slateblue;
+}
+
+.seven-mines::before
+{
+    content: "7";
+    color:snow;
+}
+
+.eight-mines::before
+{
+    content: "8";
+    color: burlywood;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 4px -4px #aef4af;
+      }
+      to {
+        box-shadow: 0 0 4px 4px #aef4af;
+      }
+}
